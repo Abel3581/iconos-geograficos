@@ -1,0 +1,614 @@
+{
+	"info": {
+		"_postman_id": "a649291f-b2a4-4b99-9118-6851583fc385",
+		"name": "Alkemy-Lab-icons",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"yanetparola.05@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"yanetparola.05@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "continentes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\": \"/usr/tmp/img1.jpg\",\r\n    \"denominacion\": \"Europa\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/continentes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"continentes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "continentes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/continentes/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"continentes",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "continentes",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/continentes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"continentes",
+						"2"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "continentes",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\": \"/usr/tmp/img7.jpg\",\r\n    \"denominacion\": \"Europa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/continentes/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"continentes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paises",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\": \"/usr/tmp/img3.jpg\",\r\n    \"denominacion\": \"EE UU\",\r\n    \"cantidadHabitantes\": 329.5,\r\n    \"superficie\": 9834000000000,\r\n    \"continenteId\": 2,\r\n    \"icons\":[{\r\n        \"imagen\": \"/usr/tmp/img1.jpg\",\r\n        \"denominacion\": \"Estatua de la Libertad\",\r\n        \"fechaCreacion\": \"1886-10-28\",\r\n        \"altura\": 93,\r\n        \"historia\": \"Fue un regalo de Francia a Estados Unidos por el centenario de su independencia el 4 de julio de 1776\"\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/paises",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paises",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/paises/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paises?details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/paises/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paises?filters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/paises?name=Francia&continenteId=5&order=ASC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Francia"
+						},
+						{
+							"key": "continenteId",
+							"value": "5"
+						},
+						{
+							"key": "order",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paises",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/paises/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paises",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\": \"/usr/tmp/img5.jpg\",\r\n    \"denominacion\": \"EE UU\",\r\n    \"cantidadHabitantes\": 329.5,\r\n    \"superficie\": 9834000000000,\r\n    \"continenteId\": 3,\r\n    \"icons\":[{\r\n        \"imagen\": \"/usr/tmp/img1.jpg\",\r\n        \"denominacion\": \"Estatua de la Libertad\",\r\n        \"fechaCreacion\": \"1886/10/28\",\r\n        \"altura\": 93,\r\n        \"historia\": \"Fue un regalo de Francia a Estados Unidos por el centenario de su independencia el 4 de julio de 1776\"\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/paises/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icons",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\": \"/usr/tmp/img2.jpg\",\r\n    \"denominacion\": \"Torre Eiffel\",\r\n    \"fechaCreacion\": \"1889-03-31\",\r\n    \"altura\": 300,\r\n    \"historia\": \"Fue creada para la Exposición Universal de París de 1889\",\r\n    \"paises\":[\r\n        {\"imagen\": \"/usr/tmp/img2.jpg\",\r\n        \"denominacion\": \"Francia\",\r\n        \"cantidadHabitantes\": 67.4,\r\n        \"superficie\": 6632734000,\r\n        \"continenteId\": 3,\r\n        \"icons\":[{}]\r\n        }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/icons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icons",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/icons/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icons?details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/icons/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icons?filters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/icons?name=Torre Eiffel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "1955/04/27",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Torre Eiffel"
+						},
+						{
+							"key": "order",
+							"value": "DESC",
+							"disabled": true
+						},
+						{
+							"key": "cities",
+							"value": "3,2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icons",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/icons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "icons",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\": \"/usr/tmp/img2.jpg\",\r\n    \"denominacion\": \"Alguna Estatua\",\r\n    \"fechaCreacion\": \"1955/04/27\",\r\n    \"altura\": 50,\r\n    \"historia\": \"su historia comienza en\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/icons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"icons"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YW5ldHBhcm9sYS4wNUBnbWFpbC5jb20iLCJleHAiOjE2MzY0MzM3NzUsImlhdCI6MTYzNjM5Nzc3NX0.nhhc1m7DZ0ev6aYkq-97dAeSJjTwGtARPb7pFBYhcpI"
+		}
+	]
+}
